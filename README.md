@@ -272,26 +272,6 @@ it("should register a user", async () => {
   - Delete sweet
   - Restock inventory
 
-## 📝 Commit Strategy With AI Co-author
-
-When AI tools are used to assist with development, include co-author attribution:
-
-```
-feat: implement user registration endpoint
-
-Wrote initial TDD failing test + controller boilerplate using ChatGPT.
-Added JWT generation logic manually.
-
-Co-authored-by: ChatGPT <chatgpt@users.noreply.github.com>
-```
-
-### When to add co-author?
-- ✅ When AI writes a test
-- ✅ When AI writes boilerplate
-- ✅ When you ask AI for debugging
-- ✅ When scaffolding modules
-- ❌ Not required for small fixes like renaming variables
-
 ## 🤖 My AI Usage
 
 I used AI tools to support development in the following ways:
