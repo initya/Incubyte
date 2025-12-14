@@ -21,11 +21,8 @@ A full-stack sweet store management system built using Test-Driven Development (
 - **Backend**: Jest + Supertest
 - **Frontend** (optional): Vitest + React Testing Library
 
-## 📦 Features
-
-DASHBOARD
-
-
+## 📦 Features & live demo
+https://drive.google.com/file/d/1GWGls_t-_9PxrTv3w6EqvIkuc3RaQrLO/view?usp=sharing
 
 
 ### Users
