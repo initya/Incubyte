@@ -7,7 +7,7 @@ async function updateImages() {
     { name: 'Gummy Bears', imageUrl: 'https://images.unsplash.com/photo-1582058091505-f87a2e55a40f?w=500&h=300&fit=crop' },
     { name: 'Lollipop', imageUrl: 'https://images.unsplash.com/photo-1625869016774-3a92be2ae2cd?w=500&h=300&fit=crop' },
     { name: 'Jelly Beans', imageUrl: 'https://images.unsplash.com/photo-1587735243615-c03f25aaff15?w=500&h=300&fit=crop' },
-    { name: 'Caramel Toffee', imageUrl: 'https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=500&h=300&fit=crop' },
+    { name: 'Caramel Toffee', imageUrl: 'https://www.istockphoto.com/photo/caramel-toffee-candies-gm186679248-29190236=crop' },
     { name: 'Sour Patch Kids', imageUrl: 'https://images.unsplash.com/photo-1499195333224-3ce974eecb47?w=500&h=300&fit=crop' },
     { name: 'Cotton Candy', imageUrl: 'https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&h=300&fit=crop' },
     { name: 'Marshmallows', imageUrl: 'https://images.unsplash.com/photo-1615478503562-ec2d8aa0e24e?w=500&h=300&fit=crop' },

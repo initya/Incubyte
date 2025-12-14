@@ -16,11 +16,11 @@ export class SweetsService {
   async findAll(search?: string, minPrice?: number, maxPrice?: number) {
     const where: any = {};
 
-    // Search by name or category (OR condition)
+    // Search by name or category (OR condition) - SQLite compatible
     if (search) {
       where.OR = [
-        { name: { contains: search, mode: 'insensitive' as const } },
-        { category: { contains: search, mode: 'insensitive' as const } },
+        { name: { contains: search } },
+        { category: { contains: search } },
       ];
     }
 
