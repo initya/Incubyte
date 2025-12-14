@@ -39,7 +39,7 @@ DASHBOARD
 <img width="1919" height="926" alt="image" src="https://github.com/user-attachments/assets/f0e12c10-4599-430e-99fa-76a5103c294e" />
 
 
-### Admin
+### Admin (admin@sweetshop.com    &  admin123)
 - ✅ Add sweets
 - ✅ Update sweets
 - ✅ Delete sweets
