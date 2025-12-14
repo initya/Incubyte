@@ -23,17 +23,31 @@ A full-stack sweet store management system built using Test-Driven Development (
 
 ## 📦 Features
 
+DASHBOARD
+
+
+
+
 ### Users
 - ✅ Register / Login
+<img width="1180" height="692" alt="image" src="https://github.com/user-attachments/assets/c4ffa543-7c4d-4e03-8e2c-a7d33adc7410" />
 - ✅ Browse sweets
+<img width="1901" height="911" alt="image" src="https://github.com/user-attachments/assets/29c885b3-5dda-4569-a13d-82843a90c684" />
 - ✅ Search sweets
+<img width="1903" height="918" alt="image" src="https://github.com/user-attachments/assets/08ad1729-3c06-48ef-9c9b-b51a56b8a9e0" />
 - ✅ Purchase sweets
+<img width="1919" height="926" alt="image" src="https://github.com/user-attachments/assets/f0e12c10-4599-430e-99fa-76a5103c294e" />
 
-### Admin
+
+### Admin (admin@sweetshop.com    &  admin123)
 - ✅ Add sweets
 - ✅ Update sweets
 - ✅ Delete sweets
 - ✅ Restock inventory
+<img width="1892" height="908" alt="image" src="https://github.com/user-attachments/assets/268f0ad6-3365-44dc-86c2-d7e39079c616" />
+<img width="771" height="891" alt="image" src="https://github.com/user-attachments/assets/9bdf896e-0c45-4eae-af71-1272f3ac0593" />
+
+
 
 ## 🧪 Tests
 
