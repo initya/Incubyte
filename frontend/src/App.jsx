@@ -4,6 +4,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import AdminPanel from './pages/AdminPanel';
+import Contact from './pages/Contact';
 import Navbar from './components/Navbar';
 
 function AppRoutes() {
@@ -34,6 +35,10 @@ function AppRoutes() {
               <Navigate to="/dashboard" />
             )
           }
+        />
+        <Route
+          path="/contact"
+          element={<Contact />}
         />
         <Route path="/" element={<Navigate to="/dashboard" />} />
       </Routes>

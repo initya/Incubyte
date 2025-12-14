@@ -176,6 +176,18 @@ function Dashboard() {
             ))}
           </div>
         )}
+
+        {/* Copyright Bar */}
+        <div className="mt-16 pt-8 border-t-2 border-orange-200">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-center sm:text-left gap-4 py-6 px-6 bg-gradient-to-r from-orange-100 to-orange-50 rounded-lg shadow-md">
+            <p className="text-gray-700 text-sm">
+              <span className="font-semibold">Just One More Bite</span> © 2025. All rights reserved.
+            </p>
+            <p className="text-gray-600 text-xs">
+              Made with ❤️ for all sweet lovers
+            </p>
+          </div>
+        </div>
       </div>
     </div>
   );

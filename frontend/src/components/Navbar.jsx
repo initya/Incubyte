@@ -27,7 +27,7 @@ function Navbar() {
             <h1 className={`text-3xl font-bold playfair transition-colors ${
               scrolled ? 'text-white' : 'text-gray-900'
             }`}>
-              Sweet Shop
+              Just One More Bite
             </h1>
           </div>
           
@@ -39,6 +39,15 @@ function Navbar() {
               }`}
             >
               Home
+            </button>
+            
+            <button
+              onClick={() => navigate('/contact')}
+              className={`font-medium transition-colors ${
+                scrolled ? 'text-white hover:text-orange-200' : 'text-gray-700 hover:text-gray-900'
+              }`}
+            >
+              Contact
             </button>
             
             {user?.role === 'admin' && (

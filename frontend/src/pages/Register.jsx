@@ -27,14 +27,41 @@ function Register() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-orange-50 p-4">
-      <div className="w-full max-w-md">
+    <div className="min-h-screen flex items-center justify-center bg-orange-50 p-4 relative overflow-hidden">
+      {/* Sweet Doodles Background */}
+      <div className="fixed inset-0 opacity-10 pointer-events-none z-0">
+        <div className="absolute top-10 left-10 text-6xl animate-bounce-slow">🍬</div>
+        <div className="absolute top-20 right-20 text-5xl animate-pulse">🍭</div>
+        <div className="absolute bottom-20 left-20 text-7xl animate-bounce-slow">🍫</div>
+        <div className="absolute bottom-10 right-10 text-6xl animate-pulse">🧁</div>
+        <div className="absolute top-1/3 left-1/4 text-5xl animate-bounce-slow">🍩</div>
+        <div className="absolute top-2/3 right-1/4 text-6xl animate-pulse">🍪</div>
+        <div className="absolute top-1/2 left-10 text-5xl animate-bounce-slow">🍰</div>
+        <div className="absolute top-1/4 right-1/3 text-6xl animate-pulse">🎂</div>
+        <div className="absolute bottom-1/3 left-1/3 text-5xl animate-bounce-slow">🍮</div>
+        <div className="absolute top-3/4 right-20 text-6xl animate-pulse">🍡</div>
+        <div className="absolute top-40 left-1/2 text-5xl animate-bounce-slow">🍨</div>
+        <div className="absolute bottom-40 right-1/3 text-6xl animate-pulse">🧇</div>
+        <div className="absolute top-60 right-40 text-5xl animate-bounce-slow">🍦</div>
+        <div className="absolute bottom-60 left-40 text-6xl animate-pulse">🥧</div>
+        <div className="absolute top-1/4 left-1/2 text-5xl animate-bounce-slow">🍯</div>
+        <div className="absolute bottom-1/4 right-1/2 text-6xl animate-pulse">🧈</div>
+        <div className="absolute top-1/2 right-1/4 text-5xl animate-bounce-slow">🥮</div>
+        <div className="absolute bottom-1/2 left-1/4 text-6xl animate-pulse">🍥</div>
+        <div className="absolute top-16 left-1/3 text-5xl animate-bounce-slow">🍧</div>
+        <div className="absolute bottom-16 right-2/3 text-6xl animate-pulse">🥠</div>
+        <div className="absolute top-2/3 left-16 text-5xl animate-bounce-slow">🍢</div>
+        <div className="absolute bottom-2/3 right-16 text-6xl animate-pulse">🍬</div>
+        <div className="absolute top-1/3 right-1/2 text-5xl animate-bounce-slow">🍭</div>
+        <div className="absolute bottom-1/3 left-1/2 text-6xl animate-pulse">🍫</div>
+      </div>
+      <div className="w-full max-w-md relative z-10">
         <div className="text-center mb-8 animate-fadeIn">
           <div className="flex justify-center mb-4">
-            <img src="/logo.png" alt="Sweet Shop Logo" className="h-24 w-24 object-contain animate-bounce-slow" />
+            <img src="/logo.png" alt="Just One More Bite Logo" className="h-24 w-24 object-contain animate-bounce-slow" />
           </div>
           <h2 className="text-4xl font-bold merriweather text-gray-900 mb-2">
-            Join Sweet Shop
+            Join Just One More Bite
           </h2>
           <p className="text-gray-600">Create your account today</p>
         </div>
