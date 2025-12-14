@@ -22,6 +22,8 @@ A full-stack sweet store management system built using Test-Driven Development (
 - **Frontend** (optional): Vitest + React Testing Library
 
 ## 📦 Features
+<img width="1180" height="692" alt="image" src="https://github.com/user-attachments/assets/c4ffa543-7c4d-4e03-8e2c-a7d33adc7410" />
+
 
 ### Users
 - ✅ Register / Login
