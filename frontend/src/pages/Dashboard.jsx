@@ -37,8 +37,35 @@ function Dashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-orange-50">
-      <div className="max-w-7xl mx-auto px-6 py-8">
+    <div className="min-h-screen bg-orange-50 relative overflow-hidden">
+      {/* Sweet Doodles Background */}
+      <div className="fixed inset-0 opacity-10 pointer-events-none z-0">
+        <div className="absolute top-10 left-10 text-6xl animate-bounce-slow">🍬</div>
+        <div className="absolute top-20 right-20 text-5xl animate-pulse">🍭</div>
+        <div className="absolute bottom-20 left-20 text-7xl animate-bounce-slow">🍫</div>
+        <div className="absolute bottom-10 right-10 text-6xl animate-pulse">🧁</div>
+        <div className="absolute top-1/3 left-1/4 text-5xl animate-bounce-slow">🍩</div>
+        <div className="absolute top-2/3 right-1/4 text-6xl animate-pulse">🍪</div>
+        <div className="absolute top-1/2 left-10 text-5xl animate-bounce-slow">🍰</div>
+        <div className="absolute top-1/4 right-1/3 text-6xl animate-pulse">🎂</div>
+        <div className="absolute bottom-1/3 left-1/3 text-5xl animate-bounce-slow">🍮</div>
+        <div className="absolute top-3/4 right-20 text-6xl animate-pulse">🍡</div>
+        <div className="absolute top-40 left-1/2 text-5xl animate-bounce-slow">🍨</div>
+        <div className="absolute bottom-40 right-1/3 text-6xl animate-pulse">🧇</div>
+        <div className="absolute top-60 right-40 text-5xl animate-bounce-slow">🍦</div>
+        <div className="absolute bottom-60 left-40 text-6xl animate-pulse">🥧</div>
+        <div className="absolute top-1/4 left-1/2 text-5xl animate-bounce-slow">🍯</div>
+        <div className="absolute bottom-1/4 right-1/2 text-6xl animate-pulse">🧈</div>
+        <div className="absolute top-1/2 right-1/4 text-5xl animate-bounce-slow">🥮</div>
+        <div className="absolute bottom-1/2 left-1/4 text-6xl animate-pulse">🍥</div>
+        <div className="absolute top-16 left-1/3 text-5xl animate-bounce-slow">🍧</div>
+        <div className="absolute bottom-16 right-2/3 text-6xl animate-pulse">🥠</div>
+        <div className="absolute top-2/3 left-16 text-5xl animate-bounce-slow">🍢</div>
+        <div className="absolute bottom-2/3 right-16 text-6xl animate-pulse">🍬</div>
+        <div className="absolute top-1/3 right-1/2 text-5xl animate-bounce-slow">🍭</div>
+        <div className="absolute bottom-1/3 left-1/2 text-6xl animate-pulse">🍫</div>
+      </div>
+      <div className="max-w-7xl mx-auto px-6 py-8 relative z-10">
         {/* Hero Banner */}
         <div className="mb-8 animate-fadeIn">
           <div className="relative w-full h-80 rounded-2xl overflow-hidden shadow-2xl">
