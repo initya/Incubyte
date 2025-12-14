@@ -1,19 +1,15 @@
-import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { sweetsApi } from '../api/sweets';
+import { useState } from 'react';
+import { useCart } from '../context/CartContext';
 
 function SweetCard({ sweet }) {
-  const queryClient = useQueryClient();
+  const { addToCart } = useCart();
+  const [isAdded, setIsAdded] = useState(false);
 
-  const purchaseMutation = useMutation({
-    mutationFn: (quantity) => sweetsApi.purchase(sweet.id, quantity),
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['sweets'] });
-    },
-  });
-
-  const handlePurchase = () => {
+  const handleAddToCart = () => {
     if (sweet.quantity > 0) {
-      purchaseMutation.mutate(1);
+      addToCart(sweet);
+      setIsAdded(true);
+      setTimeout(() => setIsAdded(false), 1500);
     }
   };
 
@@ -59,18 +55,20 @@ function SweetCard({ sweet }) {
         </div>
         
         <button
-          onClick={handlePurchase}
-          disabled={sweet.quantity === 0 || purchaseMutation.isPending}
+          onClick={handleAddToCart}
+          disabled={sweet.quantity === 0}
           className={`w-full py-3 font-semibold rounded transition-all duration-500 transform ${
             sweet.quantity > 0
-              ? 'bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-2xl hover:scale-105 active:scale-95'
+              ? isAdded
+                ? 'bg-green-500 text-white shadow-lg scale-105'
+                : 'bg-orange-500 text-white hover:bg-orange-600 shadow-md hover:shadow-2xl hover:scale-105 active:scale-95'
               : 'bg-gray-200 text-gray-400 cursor-not-allowed'
           }`}
         >
-          {purchaseMutation.isPending
-            ? 'Adding...'
+          {isAdded
+            ? '✅ Added to Cart'
             : sweet.quantity > 0
-            ? 'Add to Cart'
+            ? '🛒 Add to Cart'
             : 'Out of Stock'}
         </button>
       </div>

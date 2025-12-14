@@ -42,6 +42,11 @@ export const sweetsApi = {
     return response.data;
   },
 
+  purchaseMultiple: async (items) => {
+    const response = await apiClient.post('/sweets/purchase-multiple', items);
+    return response.data;
+  },
+
   restock: async (id, quantity) => {
     const response = await apiClient.post(`/sweets/${id}/restock`, {
       quantity,

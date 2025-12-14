@@ -1,10 +1,12 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider, useAuth } from './context/AuthContext';
+import { CartProvider } from './context/CartContext';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import AdminPanel from './pages/AdminPanel';
 import Contact from './pages/Contact';
+import Cart from './pages/Cart';
 import Navbar from './components/Navbar';
 
 function AppRoutes() {
@@ -40,6 +42,10 @@ function AppRoutes() {
           path="/contact"
           element={<Contact />}
         />
+        <Route
+          path="/cart"
+          element={user ? <Cart /> : <Navigate to="/login" />}
+        />
         <Route path="/" element={<Navigate to="/dashboard" />} />
       </Routes>
     </div>
@@ -49,7 +55,9 @@ function AppRoutes() {
 function App() {
   return (
     <AuthProvider>
-      <AppRoutes />
+      <CartProvider>
+        <AppRoutes />
+      </CartProvider>
     </AuthProvider>
   );
 }

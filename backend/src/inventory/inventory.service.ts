@@ -28,6 +28,48 @@ export class InventoryService {
     });
   }
 
+  async purchaseMultiple(items: { id: number; quantity: number }[]) {
+    try {
+      const result = await this.prisma.$transaction(async (tx) => {
+        const updatedSweets = [];
+
+        for (const item of items) {
+          const sweet = await tx.sweet.findUnique({
+            where: { id: item.id },
+          });
+
+          if (!sweet) {
+            throw new NotFoundException(`Sweet with ID ${item.id} not found`);
+          }
+
+          if (sweet.quantity < item.quantity) {
+            throw new BadRequestException(
+              `Insufficient quantity for ${sweet.name}. Available: ${sweet.quantity}, Requested: ${item.quantity}`,
+            );
+          }
+
+          const updated = await tx.sweet.update({
+            where: { id: item.id },
+            data: {
+              quantity: sweet.quantity - item.quantity,
+            },
+          });
+
+          updatedSweets.push(updated);
+        }
+
+        return updatedSweets;
+      });
+
+      return result;
+    } catch (error) {
+      if (error instanceof NotFoundException || error instanceof BadRequestException) {
+        throw error;
+      }
+      throw new BadRequestException('Failed to process purchase: ' + error.message);
+    }
+  }
+
   async restock(sweetId: number, restockDto: RestockDto) {
     const sweet = await this.prisma.sweet.findUnique({
       where: { id: sweetId },
