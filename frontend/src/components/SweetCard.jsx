@@ -21,18 +21,16 @@ function SweetCard({ sweet }) {
 
   return (
     <div className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow">
-      {sweet.imageUrl && (
-        <div className="w-full h-48 bg-gray-200 overflow-hidden">
-          <img
-            src={sweet.imageUrl}
-            alt={sweet.name}
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              e.target.src = 'https://via.placeholder.com/400x300?text=No+Image';
-            }}
-          />
-        </div>
-      )}
+      <div className="w-full h-48 bg-gray-200 overflow-hidden">
+        <img
+          src={sweet.imageUrl || 'https://images.unsplash.com/photo-1514517521153-1be72277b32f?w=500&h=300&fit=crop'}
+          alt={sweet.name}
+          className="w-full h-full object-cover"
+          onError={(e) => {
+            e.target.src = 'https://images.unsplash.com/photo-1514517521153-1be72277b32f?w=500&h=300&fit=crop';
+          }}
+        />
+      </div>
       <div className="p-6">
         <h3 className="text-xl font-bold text-gray-800 mb-2">{sweet.name}</h3>
         <p className="text-gray-600 mb-2">Category: {sweet.category}</p>
